@@ -1,20 +1,28 @@
 const titulo = document.getElementById("titulo")
 
-titulo.textContent = "Olá Mundo"
+titulo.textContent = "Contador"
 
 const mensagem = document.getElementById("mensagem")
 
-mensagem.textContent = "Minha primeira modificação!"
+mensagem.textContent = "Contagem regressiva!"
 
-const btn = document.getElementById("btn")
+let contador1 = 0
+
+const num = document.getElementById("contador")
+num.textContent = contador1
 
 
-btn.addEventListener("click", () => {
-  titulo.style.color = "red"
-  if (titulo.textContent === "Olá Thalison") {
-    titulo.textContent = "Você clicou no botão!"
-  } else {
-    titulo.textContent = "Olá Thalison"
-  }
 
+
+const aum = document.getElementById("aumentar")
+const dim = document.getElementById("diminuir")
+
+aum.addEventListener("click", () => {
+  contador1++
+  num.textContent = contador1
+})
+
+dim.addEventListener("click", () => {
+  contador1--
+  num.textContent = contador1
 })
